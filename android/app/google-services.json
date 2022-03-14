@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "338924445529",
+    "project_id": "harry-potter-app-86d4d",
+    "storage_bucket": "harry-potter-app-86d4d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338924445529:android:e87fe615213ec9044b3648",
+        "android_client_info": {
+          "package_name": "com.example.navigation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338924445529-pk9hnfpgqr8q24opcsk265q1igjs9gf8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcs2a5iKW1NSoACNhvVOyZFvxj3Pcz40o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338924445529-pk9hnfpgqr8q24opcsk265q1igjs9gf8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
