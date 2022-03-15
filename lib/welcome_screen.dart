@@ -4,7 +4,10 @@ import 'login_screen.dart';
 
 class RoundedButton extends StatelessWidget {
   RoundedButton(
-      {required this.colour, required this.title, required this.onPressed});
+      {required this.colour,
+      required this.title,
+      required this.onPressed,
+      required RoundedRectangleBorder shape});
   final Color colour;
   final String title;
   final Function onPressed;
@@ -14,7 +17,7 @@ class RoundedButton extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 16.0),
       child: Material(
         elevation: 5.0,
-        color: colour,
+        color: Color.fromARGB(255, 1, 2, 31),
         borderRadius: BorderRadius.circular(30.0),
         child: MaterialButton(
           onPressed: () => {
@@ -45,27 +48,39 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24.0),
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                RoundedButton(
-                  colour: Colors.lightBlueAccent,
-                  title: 'Log In',
-                  onPressed: () {
-                    Navigator.pushNamed(context, 'login_screen');
-                  },
-                ),
-                RoundedButton(
-                    colour: Colors.blueAccent,
-                    title: 'Register',
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        body: Stack(children: <Widget>[
+          Container(
+            decoration: new BoxDecoration(
+              image: new DecorationImage(
+                image: new AssetImage("assets/BG.jpeg"),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 24.0),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  RoundedButton(
+                    colour: Color.fromARGB(255, 2, 41, 7),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(1000)),
+                    title: 'WELCOME TO THE WORLD OF MAGIC',
                     onPressed: () {
-                      Navigator.pushNamed(context, 'registration_screen');
-                    }),
-              ]),
-        ));
+                      Navigator.pushNamed(context, 'login_screen');
+                    },
+                  ),
+                  // RoundedButton(
+                  //     colour: Colors.blueAccent,
+                  //     title: 'Register',
+                  //     onPressed: () {
+                  //       Navigator.pushNamed(context, 'registration_screen');
+                  //     }),
+                ]),
+          )
+        ]));
   }
 }

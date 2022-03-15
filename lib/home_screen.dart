@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:navigation/characters.dart';
+import 'package:navigation/movies.dart';
 import 'Author.dart';
 import 'houses.dart';
-import 'main.dart';
-import 'package:navigation/home_screen.dart';
 import 'widgets/category_selector.dart';
 
 @override
@@ -149,9 +148,15 @@ class _PotterHeadsState extends State<PotterHeads> {
                       height: 100.0,
                       minWidth: 600.0,
                       textColor: const Color.fromARGB(255, 255, 255, 255),
-                      child: const Text("KNOW YOUR PATRONUS"),
+                      child: const Text("MOVIE ADAPTATIONS"),
                       //color: Color.fromARGB(255, 5, 34, 17),
-                      onPressed: () => {},
+                      onPressed: () => {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const Movies(),
+                            ))
+                      },
                       splashColor: const Color.fromARGB(255, 131, 172, 140),
                     )),
                 Container(
